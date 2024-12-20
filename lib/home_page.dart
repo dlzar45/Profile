@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_info/ProfilePages/projects_page.dart';
 import 'package:my_info/info_tile.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,9 +29,9 @@ class HomePage extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
@@ -43,44 +44,69 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
-                    Text(
+                    const Text(
                       "Dlzar Pshtiwan",
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
-                    Text(
+                    const Text(
                       "dlzar.22@gmail.com",
                       style: TextStyle(
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Divider(),
-                    SizedBox(
+                    const Divider(),
+                    const SizedBox(
                       height: 10,
                     ),
-                    InfoTile(icons: Icons.folder_open, title: "My Projects"),
-                    SizedBox(
+                    InfoTile(
+                      icons: Icons.folder_open,
+                      title: "My Projects",
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProjectsPage()));
+                      },
+                    ),
+                    const SizedBox(
                       height: 10,
                     ),
-                    InfoTile(icons: Icons.person, title: "Accounts"),
-                    SizedBox(
+                    InfoTile(
+                      icons: Icons.person,
+                      title: "Accounts",
+                      onTap: () {},
+                    ),
+                    const SizedBox(
                       height: 10,
                     ),
-                    InfoTile(icons: Icons.share, title: "Share With Frends"),
-                    SizedBox(
+                    InfoTile(
+                      icons: Icons.share,
+                      title: "Share With Frends",
+                      onTap: () {},
+                    ),
+                    const SizedBox(
                       height: 10,
                     ),
-                    InfoTile(icons: Icons.token, title: "Review"),
-                    SizedBox(
+                    InfoTile(
+                      icons: Icons.token,
+                      title: "Review",
+                      onTap: () {},
+                    ),
+                    const SizedBox(
                       height: 10,
                     ),
-                    InfoTile(icons: Icons.info, title: "Info"),
+                    InfoTile(
+                      icons: Icons.info,
+                      title: "Info",
+                      onTap: () {},
+                    ),
                   ],
                 ),
               ),

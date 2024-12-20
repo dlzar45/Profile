@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
-void Function()? onTap;
-
 class InfoTile extends StatelessWidget {
   final IconData icons;
   final String title;
-  const InfoTile({super.key, required this.icons, required this.title});
+  final Function()? onTap;
+
+  const InfoTile({
+    super.key,
+    required this.icons,
+    required this.title,
+    required this.onTap
+  });
 
   @override
   Widget build(BuildContext context) {
