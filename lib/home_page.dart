@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_info/ProfilePages/projects_page.dart';
+import 'package:my_info/AccountsPage/account_page.dart';
+import 'package:my_info/ProjectPage/projects_page.dart';
 import 'package:my_info/info_tile.dart';
 
 class HomePage extends StatelessWidget {
@@ -81,7 +82,14 @@ class HomePage extends StatelessWidget {
                     InfoTile(
                       icons: Icons.person,
                       title: "Accounts",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AccountPage(),
+                          ),
+                        );
+                      },
                     ),
                     const SizedBox(
                       height: 10,
