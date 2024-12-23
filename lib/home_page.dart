@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_info/AccountsPage/account_page.dart';
 import 'package:my_info/ProjectPage/projects_page.dart';
+import 'package:my_info/RatingBarPage/rating_bar_page.dart';
+import 'package:my_info/SummaryPage/summary_page.dart';
 import 'package:my_info/info_tile.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,6 +10,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void _shareProfile() {
+      // Handle the feedback submission logic here (e.g., send to server, save locally)
+      // For demonstration, we'll just show a snackbar with the rating and opinion
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Copied The Profile URL'),
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SafeArea(
@@ -97,7 +109,9 @@ class HomePage extends StatelessWidget {
                     InfoTile(
                       icons: Icons.share,
                       title: "Share With Frends",
-                      onTap: () {},
+                      onTap: () {
+                        _shareProfile();
+                      },
                     ),
                     const SizedBox(
                       height: 10,
@@ -105,7 +119,14 @@ class HomePage extends StatelessWidget {
                     InfoTile(
                       icons: Icons.token,
                       title: "Review",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => RateProfilePage(),
+                          ),
+                        );
+                      },
                     ),
                     const SizedBox(
                       height: 10,
@@ -113,7 +134,14 @@ class HomePage extends StatelessWidget {
                     InfoTile(
                       icons: Icons.info,
                       title: "Info",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SummaryPage(),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),

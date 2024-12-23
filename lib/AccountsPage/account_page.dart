@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
 
@@ -28,21 +27,21 @@ class AccountPage extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 40,
-                  backgroundImage: AssetImage('assets/profile_picture.png'),
+                  backgroundImage: AssetImage('images/photo.jpg'),
                 ),
                 SizedBox(width: 16.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Your Name',
+                      'Dlzar Pshtiwan',
                       style: TextStyle(
                         fontSize: 24.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
-                      'Your Bio',
+                      'All Acounts is Here',
                       style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.grey,
@@ -60,32 +59,28 @@ class AccountPage extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.facebook, color: Colors.blue),
                     title: Text('Facebook'),
-                    onTap: () {
-                    },
+                    onTap: () {},
                   ),
                   ListTile(
                     leading: Icon(Icons.telegram, color: Colors.lightBlue),
-                    title: Text('Twitter'),
-                    onTap: () {
-                    },
+                    title: Text('Telegram'),
+                    onTap: () {},
                   ),
                   ListTile(
                     leading: Icon(Icons.email, color: Colors.pink),
-                    title: Text('Instagram'),
-                    onTap: () {
-                    },
+                    title: Text('Email'),
+                    onTap: () {},
                   ),
                   ListTile(
                     leading: Icon(Icons.phone, color: Colors.blueAccent),
-                    title: Text('LinkedIn'),
-                    onTap: () {
-                    },
+                    title: Text('Phone'),
+                    onTap: () {},
                   ),
                   ListTile(
-                    leading: Icon(Icons.youtube_searched_for, color: Colors.red),
+                    leading:
+                        Icon(Icons.youtube_searched_for, color: Colors.red),
                     title: Text('YouTube'),
-                    onTap: () {
-                    },
+                    onTap: () {},
                   ),
                 ],
               ),
