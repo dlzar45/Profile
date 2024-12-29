@@ -21,7 +21,7 @@ class SummaryPage extends StatelessWidget {
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -45,7 +45,7 @@ class SummaryPage extends StatelessWidget {
             ),
             SizedBox(height: 24.0),
             // Summary Paragraph
-            Text(
+            const Text(
               'Profile Summary',
               style: TextStyle(
                 fontSize: 24.0,
@@ -64,7 +64,7 @@ class SummaryPage extends StatelessWidget {
                   width: 2.0,
                 ),
               ),
-              child: Text(
+              child: const Text(
                 'I am a passionate developer with experience in building a variety of projects. My work spans across multiple domains including mobile applications, web development, and backend services. I enjoy tackling complex problems and coming up with innovative solutions. My goal is to continuously learn and improve, while contributing to meaningful projects that make a difference.',
                 style: TextStyle(
                   fontSize: 18.0,
